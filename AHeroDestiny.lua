@@ -14,6 +14,7 @@ local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
     TeleportSky = Window:AddTab({ Title = "Teleport Sky", Icon = "" })
     TeleportEarth = Window:AddTab({ Title = "Teleport Earth", Icon = "" })
+    SkyStats = Window:AddTab({ Title = "Sky Stats", Icon = "" })
 }
 
 local Options = Fluent.Options
@@ -666,5 +667,19 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
 })
-   end
-emd
+--Stats
+     local Input = Tabs.Main:AddInput("Input", {
+        Title = "Input",
+        Default = "Default",
+        Placeholder = "Placeholder",
+        Numeric = false, -- Only allows numbers
+        Finished = false, -- Only calls callback when you press enter
+        Callback = function(Value)
+            print("Input changed:", Value)
+        end
+    })
+
+    Input:OnChanged(function()
+        print("Input updated:", Input.Value)
+    end)
+end
