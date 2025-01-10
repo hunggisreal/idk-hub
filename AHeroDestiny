@@ -12,29 +12,197 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
-    TeleportSky = Window:AddTab({ Title = "TeleportSky", Icon = "" })
+    TeleportSky = Window:AddTab({ Title = "Teleport Sky", Icon = "" })
 }
 
 local Options = Fluent.Options
 
     Tabs.TeleportSky:AddButton({
+        Title = "Teleport Sky Spawn",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "spawn",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 1",
         Description = "",
         Callback = function()
-            Window:Dialog({
-                Title = "Title",
-                Content = "This is a dialog",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-                            print("Confirmed the dialog.")
+            local args = {
+    [1] = "quest1",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 2",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest2",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 3",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest3",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 4",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest4",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 5",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest5",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 6",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest6",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 7",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest7",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 8",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest9",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 10",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest10",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 11",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest11",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 12",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest12",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 13",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest13",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 14",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest14",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 15",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest15",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 16",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest16",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 17",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest17",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
                     }
                 }
