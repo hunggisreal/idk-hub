@@ -5,7 +5,7 @@ local Window = Fluent:CreateWindow({
     Title = "A Hero Destiny" ,
     SubTitle = "by hunggchuai",
     TabWidth = 100,
-    Size = UDim2.fromOffset(580, 460),
+    Size = UDim2.fromOffset(340, 320),
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
