@@ -28,6 +28,7 @@ local Options = Fluent.Options
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 1",
         Description = "",
@@ -39,6 +40,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 2",
         Description = "",
@@ -50,6 +52,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 3",
         Description = "",
@@ -61,6 +64,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 4",
         Description = "",
@@ -72,6 +76,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 5",
         Description = "",
@@ -83,6 +88,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 6",
         Description = "",
@@ -94,6 +100,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 7",
         Description = "",
@@ -105,6 +112,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 8",
         Description = "",
@@ -116,6 +124,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 10",
         Description = "",
@@ -127,6 +136,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 11",
         Description = "",
@@ -138,6 +148,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 12",
         Description = "",
@@ -149,6 +160,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 13",
         Description = "",
@@ -160,6 +172,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 14",
         Description = "",
@@ -171,6 +184,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 15",
         Description = "",
@@ -182,6 +196,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 16",
         Description = "",
@@ -193,6 +208,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
+})
     Tabs.TeleportSky:AddButton({
         Title = "Teleport Quest 17",
         Description = "",
@@ -204,9 +220,52 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
 
 game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
                         end
-                    }
-                }
-            })
-        end
-    })
+})
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 18",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest18",
+    [2] = true
+}
 
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+})
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 19",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest19",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+})
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 20",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest20",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+})
+    Tabs.TeleportSky:AddButton({
+        Title = "Teleport Quest 21",
+        Description = "",
+        Callback = function()
+            local args = {
+    [1] = "quest21",
+    [2] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/Portal"):FireServer(unpack(args))
+                        end
+})
