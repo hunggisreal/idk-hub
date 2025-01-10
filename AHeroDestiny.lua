@@ -9,7 +9,6 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
 })
 
---Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
     TeleportSky = Window:AddTab({ Title = "Teleport Sky", Icon = "" })
@@ -668,18 +667,25 @@ game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net")
                         end
 })
 --Stats
-     local Input = Tabs.Main:AddInput("Input", {
-        Title = "Input",
+local Input = Tabs.SkyStats:AddInput("Input", {
+        Title = "Stats",
         Default = "Default",
         Placeholder = "Placeholder",
-        Numeric = false, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
-        Callback = function(Value)
-            print("Input changed:", Value)
+        Numeric = true, -- Only allows numbers
+        Finished = true, -- Only calls callback when you press enter
+        Callback = function(stats)
         end
-    })
+local Toggle = Tabs.SkyStats:AddToggle("strength", {Title = "", Default = false })
 
-    Input:OnChanged(function()
-        print("Input updated:", Input.Value)
+    Toggle:OnChanged(function()
+        local args = {
+    [1] = "Authority",
+    [2] = stats
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Modules"):WaitForChild("Net"):WaitForChild("RE/UpgradeAscendantStat"):FireServer(unpack(args))
+    end)
+
+    Options.strength:SetValue(false)
     end)
 end
