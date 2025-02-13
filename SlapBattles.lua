@@ -1,27 +1,27 @@
 if game.PlaceId == 6403373529 then
  
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Slap Battle 👋", HidePremium = false, IntroText = "sus intro", SaveConfig = false, ConfigFolder = "sus script"})
+local Window = OrionLib:MakeWindow({Name = "sú hub", HidePremium = false, IntroText = "not normally intro", SaveConfig = false, ConfigFolder = "OrionTest"})
 
-local Tab = Window:MakeTab({
-	Name = "Other",
+local gloveoptional = Window:MakeTab({
+	Name = "Glove Optional",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-Tab:AddButton({
-	Name = "Get pillow point (100 point per click",
+gloveoptional:AddButton({
+	Name = "100 point pillow",
 	Callback = function()
       		for i = 1, 100 do
-        local args = {
-            [1] = "AddPillow"
-        }
-        game:GetService("ReplicatedStorage").Events.PillowEvent:FireServer(unpack(args))
+    local args = {
+    [1] = "AddPillow"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PillowEvent"):FireServer(unpack(args))
+
+				end
   	end    
 })
-
-end    
-})
-
-
+end
+end
 end
