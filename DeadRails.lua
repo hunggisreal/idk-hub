@@ -1,8 +1,8 @@
-if game.PlaceId == 116495829188952 then
+if game.PlaceId == 70876832253163 then
 
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
-local window = DrRayLibrary:Load("Dead Rails", "Default")
+local window = DrRayLibrary:Load("Dead Rails (Game)", "Default")
 
 local Other = DrRayLibrary.newTab("Other", "ImageIdHere")
 
