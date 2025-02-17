@@ -65,21 +65,17 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 end)
 end)
 
-other.newToggle("Noclip", "helps you go through walls", false, function(toggleState)
-    while true do
+other.newToggle("Noclip", "help you go through walls", false, function(toggleState)
+    if toggleState then
+        while wait(1.5) do
     for _, plrpart in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-				if plrpart:IsA("BasePart") then
-					plrpart.CanCollide = false
-				end
-			end
-    task.wait(1.5)
-		end	
+        if plrpart:IsA("BasePart") then
+            plrpart.CanCollide = false
+        end
+    end)
+			end)
     else
-        for _, plrpart in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-				if plrpart:IsA("BasePart") then
-					plrpart.CanCollide = true
-				end
-			end
+        
     end
 end)
 
