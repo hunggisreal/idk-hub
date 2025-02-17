@@ -6,6 +6,8 @@ local window = DrRayLibrary:Load("Dead Rails ( Game )", "Default")
 
 local tp = DrRayLibrary.newTab("Teleport", "ImageIdHere")
 
+local other = DrRayLibrary.newTab("Other", "ImageIdHere")
+
 tp.newButton("0 km Sign", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(78.3884506, 5.33051872, 29649.4609, -0.866007447, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, -0.866007447)
 end)
@@ -44,4 +46,21 @@ end)
 
 tp.newButton("Castle", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(229.593414, 23.8715992, -9025.61621, 0.015201509, 0, 0.999884427, 0, 1, 0, -0.999884427, 0, 0.015201509)
+end)
+
+other.newToggle("Infinite Jump", "", true, function(toggleState)
+    if toggleState then
+        local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+    else
+        local InfiniteJumpEnabled = false
+    end
+end)
+
+other.newInput("Speed ", "set your speed by the number you entered", function(number)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = " .. number
 end)
