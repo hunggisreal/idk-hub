@@ -63,6 +63,7 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
 end)
+end)
 
 troll.newInput("Money", "this is just a virtual number", function(money)
     game.Players.LocalPlayer.leaderstats.Money.Value = money
