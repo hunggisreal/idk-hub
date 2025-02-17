@@ -48,21 +48,20 @@ tp.newButton("Castle", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(229.593414, 23.8715992, -9025.61621, 0.015201509, 0, 0.999884427, 0, 1, 0, -0.999884427, 0, 0.015201509)
 end)
 
-other.newInput("Walkspeed", "enter the number", function(number)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = number
+other.newInput("Walkspeed", "Default Walkspeed is 16", function(walk)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = walk
 end)
 
-other.newToggle("Infinite Jumping", "", true, function(toggleState)
-    if toggleState then
-        local InfiniteJumpEnabled = true
+other.newInput("Jump Power", "Default Jump Power is 50", function(jump)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump
+end)
+
+other.newButton("Infinite Jump", "", function()
+    local InfiniteJumpEnabled = true
 game:GetService("UserInputService").JumpRequest:connect(function()
 	if InfiniteJumpEnabled then
 		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
 	end
-end)
-    else
-        local InfiniteJumpEnabled = false
-    end
 end)
 
 troll.newInput("Money", "this is just a virtual number", function(money)
