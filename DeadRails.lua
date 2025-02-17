@@ -68,7 +68,7 @@ end)
 other.newToggle("Noclip", "help you go through walls", false, function(toggleState)
     if toggleState then
         -- Khi toggleState = true, bắt đầu vòng lặp Noclip
-        while wait(1.5) do
+        while wait(0.5) do
             for _, plrpart in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
                 if plrpart:IsA("BasePart") then
                     plrpart.CanCollide = false  -- Tắt va chạm với các phần tử BasePart
