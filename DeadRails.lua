@@ -66,12 +66,14 @@ end)
 end)
 
 other.newToggle("Noclip", "helps you go through walls", false, function(toggleState)
-    if toggleState then
-        for _, plrpart in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    while true do
+    for _, plrpart in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 				if plrpart:IsA("BasePart") then
 					plrpart.CanCollide = false
 				end
 			end
+    task.wait(1.5)
+		end	
     else
         for _, plrpart in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 				if plrpart:IsA("BasePart") then
