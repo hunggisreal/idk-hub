@@ -65,6 +65,22 @@ game:GetService("UserInputService").JumpRequest:connect(function()
 end)
 end)
 
+other.newToggle("Noclip", "helps you go through walls", false, function(toggleState)
+    if toggleState then
+        for _, plrpart in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if plrpart:IsA("BasePart") then
+					plrpart.CanCollide = false
+				end
+			end
+    else
+        for _, plrpart in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+				if plrpart:IsA("BasePart") then
+					plrpart.CanCollide = true
+				end
+			end
+    end
+end)
+
 troll.newInput("Money", "this is just a virtual number", function(money)
     game.Players.LocalPlayer.leaderstats.Money.Value = money
 end)
