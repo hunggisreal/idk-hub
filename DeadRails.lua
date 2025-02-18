@@ -1,3 +1,12 @@
+local StarterGui = game:GetService("StarterGui")
+
+StarterGui:SetCore("SendNotification", {
+    Title = "epik notify";
+    Text = "sorry for any bugs";
+    Icon = "rbxassetid://104451507735118";
+    Duration = 10;
+})
+
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 local window = DrRayLibrary:Load("Dead Rails ( Game )", "Default")
