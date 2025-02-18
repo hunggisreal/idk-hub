@@ -62,7 +62,10 @@ other.newInput("Walkspeed", "Default Walkspeed is 16", function(walk)
 end)
 
 other.newInput("Jump Power", "Default Jump Power is 50", function(jump)
+    while true do
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = jump
+    wait(0.1)
+		end
 end)
 
 other.newButton("Infinite Jump", "", function()
