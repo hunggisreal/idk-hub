@@ -209,3 +209,13 @@ if tool then
     clonedTool.Parent = player.Backpack
 		end
 end)
+
+troll.newButton("Clone Vampire Knife", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Vampire Knife") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
