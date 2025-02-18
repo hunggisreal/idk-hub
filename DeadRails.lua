@@ -86,6 +86,126 @@ other.newToggle("Noclip", "help you go through walls", false, function(toggleSta
     end
 end)
 
+other.newToggle("Unlock third person", "press again to turn off", false, function(toggleState)
+    if toggleState then
+        game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 50
+        game:GetService("Players").LocalPlayer.CameraMode = Enum.CameraMode.Classic
+    else
+        game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 0
+        game:GetService("Players").LocalPlayer.CameraMode = Enum.CameraMode.LockFirstPerson
+    end
+end)
+
 troll.newInput("Money", "this is just a virtual number", function(money)
     game.Players.LocalPlayer.leaderstats.Money.Value = money
+end)
+
+troll.newButton("Clone Shovel", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Shovel") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Sack", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Sack") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Molotov", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Molotov") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Snake Oil", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Snake Oil") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Hammer", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Hammer") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Pickaxe", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Pickaxe") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Axe", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Axe") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Bandage", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Bandage") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Rifle", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Rifle") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Revolver", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Revolver") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
+end)
+
+troll.newButton("Clone Shotgun", "you must have item and don't holding it", function()
+    local player = game.Players.LocalPlayer
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChild("Shotgun") 
+
+if tool then
+    local clonedTool = tool:Clone()
+    clonedTool.Parent = player.Backpack
+		end
 end)
