@@ -17,7 +17,7 @@ local other = DrRayLibrary.newTab("Other", "ImageIdHere")
 
 local troll = DrRayLibrary.newTab("Trolling", "ImageIdHere")
 
-local badge = DrRayLibrary.newTab("Badges", "ImageIdHere")
+local badges = DrRayLibrary.newTab("Badges", "ImageIdHere")
 
 tp.newButton("0 km Sign", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(78.3884506, 5.33051872, 29649.4609, -0.866007447, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, -0.866007447)
