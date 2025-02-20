@@ -17,6 +17,8 @@ local other = DrRayLibrary.newTab("Other", "ImageIdHere")
 
 local troll = DrRayLibrary.newTab("Trolling", "ImageIdHere")
 
+local badge = DrRayLibrary.newTab("Badges", "ImageIdHere")
+
 tp.newButton("0 km Sign", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(78.3884506, 5.33051872, 29649.4609, -0.866007447, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, -0.866007447)
 end)
@@ -230,4 +232,40 @@ if tool then
     local clonedTool = tool:Clone()
     clonedTool.Parent = player.Backpack
 		end
+end)
+
+badges.newButton("Get 10 km badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 645268222125943)
+end)
+
+badges.newButton("Get 20 km badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 2076445169223403)
+end)
+
+badges.newButton("Get 30 km badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 4221210556563546)
+end)
+
+badges.newButton("Get 40 km badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 2821491298750356)
+end)
+
+badges.newButton("Get 50 km badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 1202375680478695)
+end)
+
+badges.newButton("Get 60 km badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 1557414254631731)
+end)
+
+badges.newButton("Get 70 km badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 936048760395435)
+end)
+
+badges.newButton("Get 80 km badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 1644136963050667)
+end)
+
+badges.newButton("Get The Bridge badge", "", function()
+    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 626157510808872)
 end)
