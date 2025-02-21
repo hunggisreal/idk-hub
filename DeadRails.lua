@@ -234,36 +234,84 @@ if tool then
 		end
 end)
 
-esp.newToggle("Esp player", "highlight all player", false, function(toggleState)
+esp.newToggle("Esp player", "highlight all player and display the meter number", false, function(toggleState)
     if toggleState then
         local Players = game.Players
+local LocalPlayer = Players.LocalPlayer
+local Workspace = game.Workspace
 
-local function highlightCharacter(character)
+local function createHighlight(character)
+    -- Tạo Highlight
     local highlight = Instance.new("Highlight")
     highlight.Adornee = character
     highlight.FillColor = Color3.fromRGB(255, 0, 0)
     highlight.FillTransparency = 0.5
     highlight.Parent = character
+
+    -- Tạo BillboardGui
+    local billboard = Instance.new("BillboardGui")
+    billboard.Adornee = character:WaitForChild("HumanoidRootPart")
+    billboard.Size = UDim2.new(5, 0, 1, 0)
+    billboard.StudsOffset = Vector3.new(0, 3, 0)
+    billboard.AlwaysOnTop = true
+
+    -- Tạo TextLabel
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(1, 0, 1, 0)
+    textLabel.BackgroundTransparency = 1
+    textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    textLabel.TextStrokeTransparency = 0
+    textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.TextSize = 18
+    textLabel.Parent = billboard
+
+    -- Cập nhật Tên và Khoảng Cách
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if character and character:FindFirstChild("HumanoidRootPart") then
+            local distance = (LocalPlayer.Character.HumanoidRootPart.Position - character.HumanoidRootPart.Position).Magnitude
+            textLabel.Text = character.Name .. " - " .. string.format("%.1f m", distance)
+        end
+    end)
+
+    billboard.Parent = character
 end
 
+-- Tạo Highlight cho người chơi hiện tại và khi respawn
 for _, player in pairs(Players:GetPlayers()) do
-    if player.Character then
-        highlightCharacter(player.Character)
+    if player ~= LocalPlayer and player.Character then
+        createHighlight(player.Character)
     end
-    player.CharacterAdded:Connect(highlightCharacter)
+    player.CharacterAdded:Connect(function(character)
+        createHighlight(character)
+    end)
 end
 
+-- Khi người chơi mới tham gia
 Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(highlightCharacter)
+    player.CharacterAdded:Connect(function(character)
+        createHighlight(character)
+    end)
 end)
     else
-        for _, player in pairs(game.Players:GetPlayers()) do
-    if player.Character then
-        local highlight = player.Character:FindFirstChildOfClass("Highlight")
-        if highlight then
-            highlight:Destroy()
-        end
+        local function removeHighlightAndGui(character)
+    if character then
+        local highlight = character:FindFirstChildOfClass("Highlight")
+        if highlight then highlight:Destroy() end
+
+        local billboard = character:FindFirstChildOfClass("BillboardGui")
+        if billboard then billboard:Destroy() end
     end
-			end
+end
+
+for _, player in pairs(game.Players:GetPlayers()) do
+    if player.Character then
+        removeHighlightAndGui(player.Character)
+    end
+    player.CharacterAdded:Connect(removeHighlightAndGui)
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(removeHighlightAndGui)
+end)
     end
 end)
