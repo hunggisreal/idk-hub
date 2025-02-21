@@ -17,7 +17,7 @@ local other = DrRayLibrary.newTab("Other", "ImageIdHere")
 
 local troll = DrRayLibrary.newTab("Trolling", "ImageIdHere")
 
-local badges = DrRayLibrary.newTab("Badges", "ImageIdHere")
+local esp = DrRayLibrary.newTab("Esp", "ImageIdHere")
 
 tp.newButton("0 km Sign", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(78.3884506, 5.33051872, 29649.4609, -0.866007447, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, -0.866007447)
@@ -234,38 +234,36 @@ if tool then
 		end
 end)
 
-badges.newButton("Get 10 km badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 645268222125943)
-end)
+esp.newToggle("Esp player", "highlight all player", false, function(toggleState)
+    if toggleState then
+        local Players = game.Players
 
-badges.newButton("Get 20 km badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 2076445169223403)
-end)
+local function highlightCharacter(character)
+    local highlight = Instance.new("Highlight")
+    highlight.Adornee = character
+    highlight.FillColor = Color3.fromRGB(255, 0, 0)
+    highlight.FillTransparency = 0.5
+    highlight.Parent = character
+end
 
-badges.newButton("Get 30 km badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 4221210556563546)
-end)
+for _, player in pairs(Players:GetPlayers()) do
+    if player.Character then
+        highlightCharacter(player.Character)
+    end
+    player.CharacterAdded:Connect(highlightCharacter)
+end
 
-badges.newButton("Get 40 km badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 2821491298750356)
+Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(highlightCharacter)
 end)
-
-badges.newButton("Get 50 km badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 1202375680478695)
-end)
-
-badges.newButton("Get 60 km badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 1557414254631731)
-end)
-
-badges.newButton("Get 70 km badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 936048760395435)
-end)
-
-badges.newButton("Get 80 km badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 1644136963050667)
-end)
-
-badges.newButton("Get The Bridge badge", "", function()
-    game:GetService("BadgeService"):AwardBadge(game.Players.LocalPlayer.UserId, 626157510808872)
+    else
+        for _, player in pairs(game.Players:GetPlayers()) do
+    if player.Character then
+        local highlight = player.Character:FindFirstChildOfClass("Highlight")
+        if highlight then
+            highlight:Destroy()
+        end
+    end
+			end
+    end
 end)
