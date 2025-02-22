@@ -1,7 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
-
 local Window = OrionLib:MakeWindow({Name = "Dead Rails", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest", IntroText = "epik intro"})
-
 local game = Window:MakeTab({
 	Name = "Game",
 	Icon = "rbxassetid://4483345998",
