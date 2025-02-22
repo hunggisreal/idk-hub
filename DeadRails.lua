@@ -28,6 +28,8 @@ local troll = DrRayLibrary.newTab("Trolling", "ImageIdHere")
 
 local esp = DrRayLibrary.newTab("Esp", "ImageIdHere")
 
+local game = DrRayLibrary.newTab("Game", "ImageIdHere")
+
 tp.newLabel("Tip: it only works in single player")
 
 tp.newButton("0 km Sign", "", function()
@@ -427,4 +429,34 @@ else
     warn("Folder không tồn tại trong Workspace!")
 			end
     end
+end)
+
+game.newButton("Bring Item", "bring all item to you", function()
+    local Players = game:GetService("Players")
+local Workspace = game.Workspace
+local runtimeItemsFolder = Workspace:FindFirstChild("RuntimeItems") -- Thư mục chứa các item
+local localPlayer = Players.LocalPlayer -- Lấy LocalPlayer
+
+-- Hàm để đưa tất cả item tới vị trí của LocalPlayer
+local function bringItemsToLocalPlayer()
+    local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
+    local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+    if not humanoidRootPart then
+        warn("Người chơi không có HumanoidRootPart!")
+        return
+    end
+
+    -- Lặp qua tất cả các item trong thư mục RuntimeItems
+    for _, item in pairs(runtimeItemsFolder:GetChildren()) do
+        if item:IsA("Model") and item.PrimaryPart then
+            -- Đưa từng item đến vị trí của LocalPlayer
+            item:SetPrimaryPartCFrame(humanoidRootPart.CFrame)
+        else
+            warn("Item không hợp lệ hoặc không có PrimaryPart: " .. item.Name)
+        end
+    end
+end
+
+-- Gọi hàm để đưa các item tới LocalPlayer
+bringItemsToLocalPlayer()
 end)
