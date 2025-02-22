@@ -28,7 +28,7 @@ local troll = DrRayLibrary.newTab("Trolling", "ImageIdHere")
 
 local esp = DrRayLibrary.newTab("Esp", "ImageIdHere")
 
-local game = DrRayLibrary.newTab("Game", "ImageIdHere")
+local gameTab = DrRayLibrary.newTab("Game", "ImageIdHere")
 
 tp.newLabel("Tip: it only works in single player")
 
