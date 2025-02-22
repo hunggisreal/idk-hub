@@ -315,3 +315,105 @@ game.Players.PlayerAdded:Connect(function(player)
 end)
     end
 end)
+
+esp.newToggle("Esp items", "highlight all items and display the meter number", false, function(toggleState)
+    if toggleState then
+        local Players = game.Players
+local LocalPlayer = Players.LocalPlayer
+local Workspace = game.Workspace
+
+-- Hàm tạo highlight và hiển thị tên + khoảng cách
+local function createHighlightForModel(model)
+    if not model:IsA("Model") or not model.PrimaryPart then
+        warn(model.Name .. " không có PrimaryPart. Vui lòng thiết lập PrimaryPart!")
+        return
+    end
+
+    local primaryPart = model.PrimaryPart
+
+    -- Tạo Highlight
+    local highlight = Instance.new("Highlight")
+    highlight.Adornee = model
+    highlight.FillColor = Color3.fromRGB(0, 255, 0)
+    highlight.FillTransparency = 0.5
+    highlight.OutlineTransparency = 0.2
+    highlight.Parent = model
+
+    -- Tạo BillboardGui
+    local billboard = Instance.new("BillboardGui")
+    billboard.Adornee = primaryPart
+    billboard.Size = UDim2.new(5, 0, 1, 0)
+    billboard.StudsOffset = Vector3.new(0, 3, 0)
+    billboard.AlwaysOnTop = true
+
+    -- Tạo TextLabel
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(1, 0, 1, 0)
+    textLabel.BackgroundTransparency = 1
+    textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.TextSize = 18
+    textLabel.Text = model.Name -- Hiển thị tên Model ban đầu
+    textLabel.Parent = billboard
+
+    -- Cập nhật Khoảng Cách
+    game:GetService("RunService").RenderStepped:Connect(function()
+        if primaryPart and LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+            local distance = (LocalPlayer.Character.HumanoidRootPart.Position - primaryPart.Position).Magnitude
+            textLabel.Text = model.Name .. " - " .. string.format("%.1f m", distance) -- Hiển thị tên và khoảng cách
+        end
+    end)
+
+    billboard.Parent = primaryPart
+end
+
+-- Lấy Folder
+local folder = Workspace:FindFirstChild("RuntimeItems") -- Thay "YourFolderName" bằng tên folder
+if not folder then
+    warn("Folder không tồn tại trong Workspace!")
+    return
+end
+
+-- Áp dụng highlight cho các Model hiện có trong Folder
+for _, model in pairs(folder:GetChildren()) do
+    if model:IsA("Model") then
+        createHighlightForModel(model)
+    end
+end
+
+-- Tự động thêm highlight cho các Model mới
+folder.ChildAdded:Connect(function(child)
+    if child:IsA("Model") then
+        createHighlightForModel(child)
+    end
+end)
+    else
+        local function removeHighlightAndGui(model)
+    if model:IsA("Model") then
+        -- Xóa Highlight
+        local highlight = model:FindFirstChildOfClass("Highlight")
+        if highlight then
+            highlight:Destroy()
+        end
+
+        -- Xóa BillboardGui
+        if model.PrimaryPart then
+            local billboard = model.PrimaryPart:FindFirstChildOfClass("BillboardGui")
+            if billboard then
+                billboard:Destroy()
+            end
+        end
+    end
+end
+
+-- Lấy Folder và xóa highlight + gui cho tất cả Model
+local folder = game.Workspace:FindFirstChild("RuntimeItems") -- Thay "YourFolderName" bằng tên folder
+if folder then
+    for _, model in pairs(folder:GetChildren()) do
+        removeHighlightAndGui(model)
+    end
+else
+    warn("Folder không tồn tại trong Workspace!")
+			end
+    end
+end)
