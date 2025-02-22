@@ -4,7 +4,16 @@ StarterGui:SetCore("SendNotification", {
     Title = "epik notify";
     Text = "sorry for any bugs";
     Icon = "rbxassetid://104451507735118";
-    Duration = 10;
+    Duration = 5;
+})
+
+local StarterGui = game:GetService("StarterGui")
+
+StarterGui:SetCore("SendNotification", {
+    Title = "Notification";
+    Text = "Use at your own risk";
+    Icon = "rbxassetid://104451507735118";
+    Duration = 5;
 })
 
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
@@ -18,6 +27,8 @@ local other = DrRayLibrary.newTab("Other", "ImageIdHere")
 local troll = DrRayLibrary.newTab("Trolling", "ImageIdHere")
 
 local esp = DrRayLibrary.newTab("Esp", "ImageIdHere")
+
+tp.newLabel("Tip: it only works in single player")
 
 tp.newButton("0 km Sign", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(78.3884506, 5.33051872, 29649.4609, -0.866007447, 0, 0.500031412, 0, 1, 0, -0.500031412, 0, -0.866007447)
