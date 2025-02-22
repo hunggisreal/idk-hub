@@ -247,7 +247,7 @@ end)
 esp.newToggle("Esp player", "highlight all player and display the meter number", false, function(toggleState)
     if toggleState then
         local Players = game.Players
-local localPlayer = Players.LocalPlayer
+local LocalPlayer = Players.LocalPlayer
 local Workspace = game.Workspace
 
 local function createHighlight(character)
@@ -329,7 +329,7 @@ end)
 esp.newToggle("Esp items", "highlight all items and display the meter number", false, function(toggleState)
     if toggleState then
         local Players = game.Players
-local localPlayer = Players.LocalPlayer
+local LocalPlayer = Players.LocalPlayer
 local Workspace = game.Workspace
 
 -- Hàm tạo highlight và hiển thị tên + khoảng cách
@@ -428,7 +428,7 @@ else
     end
 end)
 
-game.newButton("Bring Item", "bring all item to you", function()
+gameTab.newButton("Bring Item", "bring all item to you", function()
     local Players = game:GetService("Players")
 local Workspace = game.Workspace
 local runtimeItemsFolder = Workspace:FindFirstChild("RuntimeItems") -- Thư mục chứa các item
