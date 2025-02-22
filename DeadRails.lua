@@ -247,7 +247,7 @@ end)
 esp.newToggle("Esp player", "highlight all player and display the meter number", false, function(toggleState)
     if toggleState then
         local Players = game.Players
-local LocalPlayer = Players.LocalPlayer
+local localPlayer = Players.LocalPlayer
 local Workspace = game.Workspace
 
 local function createHighlight(character)
@@ -329,7 +329,7 @@ end)
 esp.newToggle("Esp items", "highlight all items and display the meter number", false, function(toggleState)
     if toggleState then
         local Players = game.Players
-local LocalPlayer = Players.LocalPlayer
+local localPlayer = Players.LocalPlayer
 local Workspace = game.Workspace
 
 -- Hàm tạo highlight và hiển thị tên + khoảng cách
