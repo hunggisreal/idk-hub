@@ -256,8 +256,6 @@ local function getPlayers()
     return players
 end
 
-local selectedPlayer = nil
-
 game:GetService("UserInputService").JumpRequest:Connect(function()
     if _G.InfiniteJumpEnabled then
         game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
