@@ -1,7 +1,14 @@
 if game.PlaceId == 116495829188952 then
-    
-else if game.PlaceId == 987654321 then
-    print("Place 2")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hunggchuaii/my-script/refs/heads/main/DeadRailsLobby.lua"))()
+else if game.PlaceId == 70876832253163 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hunggchuaii/my-script/refs/heads/main/DeadRails.lua"))()
 else
-    print("Unknown place")
+     local StarterGui = game:GetService("StarterGui")
+
+StarterGui:SetCore("SendNotification", {
+    Title = "epik notify";
+    Text = "Game Not Supported!❌";
+    Icon = "rbxassetid://104451507735118";
+    Duration = 5;
+})
 end
