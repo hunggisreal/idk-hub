@@ -1,3 +1,5 @@
+-- you can use this code to load my script: loadstring(game:HttpGet("https://raw.githubusercontent.com/hunggisreal/my-script/refs/heads/main/MainLoader.lua"))()
+
 if game.PlaceId == 116495829188952 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/hunggisreal/my-script/refs/heads/main/DeadRailsLobby.lua"))()
 
